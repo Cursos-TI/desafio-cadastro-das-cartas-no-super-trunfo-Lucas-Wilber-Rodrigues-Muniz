@@ -9,6 +9,8 @@ int main() {
     float area1;
     float pib1;
     int pontosTuristicos1;
+    float densidadePopulacional1;
+    float pibPerCapita1;
 
     // Variáveis para a Carta 2
     char estado2;
@@ -18,6 +20,8 @@ int main() {
     float area2;
     float pib2;
     int pontosTuristicos2;
+    float densidadePopulacional2;
+    float pibPerCapita2;
 
     // Entrada de dados para a Carta 1
     printf("Insira os dados para a Carta 1:\n");
@@ -36,6 +40,10 @@ int main() {
     printf("Numero de Pontos Turisticos: ");
     scanf("%d", &pontosTuristicos1);
 
+    // Cálculo da densidade populacional e PIB per capita para a Carta 1
+    densidadePopulacional1 = populacao1 / area1;
+    pibPerCapita1 = pib1 / populacao1;
+
     // Entrada de dados para a Carta 2
     printf("\nInsira os dados para a Carta 2:\n");
     printf("Estado (A-H): ");
@@ -53,6 +61,10 @@ int main() {
     printf("Numero de Pontos Turisticos: ");
     scanf("%d", &pontosTuristicos2);
 
+    // Cálculo da densidade populacional e PIB per capita para a Carta 2
+    densidadePopulacional2 = populacao2 / area2;
+    pibPerCapita2 = pib2 / populacao2;
+
     // Exibição dos dados da Carta 1
     printf("\nCarta 1:\n");
     printf("Estado: %c\n", estado1);
@@ -62,6 +74,8 @@ int main() {
     printf("Area: %.2f km2\n", area1);
     printf("PIB: %.2f bilhoes de reais\n", pib1);
     printf("Numero de Pontos Turisticos: %d\n", pontosTuristicos1);
+    printf("Densidade Populacional: %.2f habitantes/km2\n", densidadePopulacional1);
+    printf("PIB per Capita: %.2f reais\n", pibPerCapita1);
 
     // Exibição dos dados da Carta 2
     printf("\nCarta 2:\n");
@@ -72,8 +86,11 @@ int main() {
     printf("Area: %.2f km2\n", area2);
     printf("PIB: %.2f bilhoes de reais\n", pib2);
     printf("Numero de Pontos Turisticos: %d\n", pontosTuristicos2);
+    printf("Densidade Populacional: %.2f habitantes/km2\n", densidadePopulacional2);
+    printf("PIB per Capita: %.2f reais\n", pibPerCapita2);
+
     // Mensagem de sucesso
-    printf("\nCarta cadastrada com sucesso!\n");
+    printf("\nCartas cadastradas com sucesso!\n");
 
     return 0;
 }
